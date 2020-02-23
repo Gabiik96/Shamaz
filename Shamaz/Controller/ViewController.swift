@@ -24,12 +24,10 @@ class ViewController: UIViewController {
 
     let endArray = ["day", "week", "month", "year"]
 
-    let randomNumber = Int.random(in: 1...10)
-
     
     @IBOutlet weak var questionTextLabel: UILabel!
-    @IBOutlet weak var futureBtn: RoundButton!
-    @IBOutlet weak var pastBtn: RoundButton!
+    @IBOutlet weak var whoBtn: RoundButton!
+    @IBOutlet weak var stackPastFutureBtns: UIStackView!
     
     
     // Navigation bar textAttributes change, before view is on screen -> questionTextLabel filled with default
@@ -52,30 +50,38 @@ class ViewController: UIViewController {
     }
     
     func buttonsHide(){
-        if futureBtn.isHidden == true, pastBtn.isHidden == true {
-            pastBtn.isHidden = false
-            futureBtn.isHidden = false
-            whoBtn.isHidden = true
-        } else {
-            pastBtn.isHidden = true
-            futureBtn.isHidden = true
+        if stackPastFutureBtns.isHidden == false {
+            stackPastFutureBtns.isHidden = true
             whoBtn.isHidden = false
+        } else {
+            stackPastFutureBtns.isHidden = false
+            whoBtn.isHidden = true
         }
     }
     
     
-    
     @IBAction func futureBtnPressed(_ sender: RoundButton) {
         buttonsHide()
-        questionTextLabel.text = makeQuestion(start: futureStartArray, end: endArray, number: randomNumber)
+        questionTextLabel.text = makeQuestion(start: futureStartArray, end: endArray, number: Int.random(in: 1...10))
         
     }
     
     
     @IBAction func pastBtnPressed(_ sender: RoundButton) {
+        buttonsHide()
+        questionTextLabel.text = makeQuestion(start: futureStartArray, end: endArray, number: Int.random(in: 1...10))
+    }
+    
+    @IBAction func whoBtnPressed(_ sender: RoundButton) {
+        
     }
     
     @IBAction func resetBtnPressed(_ sender: UIBarButtonItem) {
+        questionTextLabel.text = defaultText
+        if stackPastFutureBtns.isHidden == true {
+                stackPastFutureBtns.isHidden = false
+                whoBtn.isHidden = true
+        }
     }
     
 }

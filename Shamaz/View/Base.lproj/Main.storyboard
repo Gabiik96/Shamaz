@@ -15,6 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRn-Q5-hRU">
+                                <rect key="frame" x="0.0" y="74" width="414" height="192"/>
+                                <items>
+                                    <navigationItem title="SHAMAZ" id="vKZ-e1-lsf">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Aox-ad-U9U">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="resetBtnPressed:" destination="BYZ-38-t0r" id="wnh-wm-Rj9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k9b-4v-V6l">
                                 <rect key="frame" x="30" y="762" width="354" height="70"/>
                                 <subviews>
@@ -91,29 +104,52 @@
                                     <constraint firstItem="p2Z-uF-Akb" firstAttribute="top" secondItem="u6C-Tq-NUa" secondAttribute="top" constant="20" symbolic="YES" id="ziQ-sy-Ewm"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRn-Q5-hRU">
-                                <rect key="frame" x="0.0" y="74" width="414" height="192"/>
-                                <items>
-                                    <navigationItem title="SHAMAZ" id="vKZ-e1-lsf">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Aox-ad-U9U">
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <action selector="resetBtnPressed:" destination="BYZ-38-t0r" id="wnh-wm-Rj9"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccs-0h-408" customClass="RoundButton" customModule="Shamaz" customModuleProvider="target">
+                                <rect key="frame" x="30" y="762" width="354" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                <state key="normal" title="Who's next? ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="futureBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yih-Pq-pKG"/>
+                                    <action selector="whoBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y7E-rL-ZnS"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-bV-LTN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mZQ-bV-LTN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3Gz-lf-bFF"/>
+                            <constraint firstItem="mZQ-bV-LTN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DH0-Ja-Z8T"/>
                             <constraint firstItem="u6C-Tq-NUa" firstAttribute="top" secondItem="hRn-Q5-hRU" secondAttribute="bottom" id="DID-xj-yoF"/>
                             <constraint firstItem="u6C-Tq-NUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jt2-Ng-PIX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k9b-4v-V6l" secondAttribute="bottom" constant="30" id="Kre-cw-ubT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ccs-0h-408" secondAttribute="bottom" constant="30" id="NeZ-PO-dfC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k9b-4v-V6l" secondAttribute="trailing" constant="30" id="R9v-vL-Ax7"/>
                             <constraint firstItem="hRn-Q5-hRU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="W66-HP-1E4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ccs-0h-408" secondAttribute="trailing" constant="30" id="bQX-Ri-nPY"/>
+                            <constraint firstItem="mZQ-bV-LTN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="btX-8J-Sgm"/>
+                            <constraint firstItem="ccs-0h-408" firstAttribute="top" secondItem="u6C-Tq-NUa" secondAttribute="bottom" constant="40" id="cc9-In-TCT"/>
                             <constraint firstItem="u6C-Tq-NUa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fJO-VY-Mqi"/>
                             <constraint firstItem="k9b-4v-V6l" firstAttribute="top" secondItem="u6C-Tq-NUa" secondAttribute="bottom" constant="40" id="hpd-Fu-uXQ"/>
+                            <constraint firstAttribute="bottom" secondItem="mZQ-bV-LTN" secondAttribute="bottom" id="ku0-7l-kRj"/>
+                            <constraint firstItem="ccs-0h-408" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oSe-8h-kAV"/>
                             <constraint firstItem="hRn-Q5-hRU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="op5-q5-wLd"/>
                             <constraint firstItem="k9b-4v-V6l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="pGZ-Ye-bfk"/>
                             <constraint firstItem="hRn-Q5-hRU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x81-Nk-f5I"/>
@@ -128,9 +164,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="futureBtn" destination="ETJ-et-BmU" id="Guu-qx-qxz"/>
-                        <outlet property="pastBtn" destination="SIL-cn-hdq" id="RLt-Sh-wPr"/>
                         <outlet property="questionTextLabel" destination="p2Z-uF-Akb" id="tp3-3B-g3R"/>
+                        <outlet property="stackPastFutureBtns" destination="k9b-4v-V6l" id="loh-pX-bXp"/>
+                        <outlet property="whoBtn" destination="ccs-0h-408" id="2E2-up-3yt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
