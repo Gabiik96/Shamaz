@@ -87,8 +87,8 @@
 		42F0B04723FF67F1007689CB /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				42F0B03A23FF5905007689CB /* Assets.xcassets */,
 				42F0B03F23FF5905007689CB /* Info.plist */,
+				42F0B03A23FF5905007689CB /* Assets.xcassets */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4YKPW2G86;
-				INFOPLIST_FILE = Shamaz/Info.plist;
+				INFOPLIST_FILE = "Shamaz/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4YKPW2G86;
-				INFOPLIST_FILE = Shamaz/Info.plist;
+				INFOPLIST_FILE = "Shamaz/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
