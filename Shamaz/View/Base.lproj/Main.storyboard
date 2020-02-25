@@ -22,7 +22,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Aox-ad-U9U">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <action selector="resetBtnPressed:" destination="BYZ-38-t0r" id="wnh-wm-Rj9"/>
+                                                <action selector="againOrResetBtnPressed:" destination="BYZ-38-t0r" id="0DQ-qC-4zd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -88,7 +88,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Text
 </string>
-                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -146,7 +146,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="againBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kga-KW-glf"/>
+                                    <action selector="againOrResetBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pz2-Y3-oHa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -173,11 +173,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="refresh" id="pDt-1e-xHV">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>

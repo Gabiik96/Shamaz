@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Arrays
+    // Arrays, each contains part of question
     let defaultText = "Tell us something about you from your"
     
     let pastStartArray = ["How was your best moment in last ",
@@ -24,32 +26,31 @@ class ViewController: UIViewController {
 
     let endArray = ["day", "week", "month", "year"]
 
-    
+    // MARK: - IBOutlets
+    // Outlet connections to VC
     @IBOutlet weak var questionTextLabel: UILabel!
     @IBOutlet weak var whoBtn: RoundButton!
     @IBOutlet weak var stackPastFutureBtns: UIStackView!
     @IBOutlet weak var againBtn: RoundButton!
     
     
+    //MARK: - ViewAppear/Load
     // Navigation bar textAttributes change, before view is on screen -> questionTextLabel filled with default
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
-            NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 50)!
-        ]
+        // Customize navigationBarTextAttributes
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black,
+                          NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 60)!]
         UINavigationBar.appearance().titleTextAttributes = attributes
-        
         questionTextLabel.text = defaultText
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-
     }
     
+    // MARK: - Functions
+    // Function to hide/unhide Past & Future button
     func buttonsHide(){
         if stackPastFutureBtns.isHidden == false {
             stackPastFutureBtns.isHidden = true
@@ -60,58 +61,44 @@ class ViewController: UIViewController {
         }
     }
     
+    // Function to change attributes of questionTextLabel + animation
+    func questionTextLabelAttributes(textSize: Int = 60, labelText: String){
+        UIView.transition(with: questionTextLabel, duration: 0.7, options: [.curveLinear, .transitionCrossDissolve], animations: {
+            self.questionTextLabel.font = self.questionTextLabel.font.withSize(CGFloat(textSize))
+            self.questionTextLabel.text = labelText
+        }, completion: nil)
+    }
+    
+    // Function defining what should happen to reset screen to default
     func resetScreen(){
-//        questionTextLabel.text = defaultText
         stackPastFutureBtns.isHidden = false
         whoBtn.isHidden = true
         againBtn.isHidden = true
-        UIView.transition(with: questionTextLabel, duration: 0.7, options: [.curveLinear, .transitionCrossDissolve], animations: {
-            self.questionTextLabel.text = self.defaultText
-        }, completion: nil)
-        self.questionTextLabel.font = self.questionTextLabel.font.withSize(36)
-        }
+        questionTextLabelAttributes(labelText: self.defaultText)
+    }
     
-    
+    //MARK: - IBActions
+    // Bar button and buttons action connections
     @IBAction func futureBtnPressed(_ sender: RoundButton) {
         buttonsHide()
-        
-        UIView.transition(with: questionTextLabel, duration: 0.7, options: [.curveLinear, .transitionCrossDissolve], animations: {
-            self.questionTextLabel.text = makeQuestion(start: self.futureStartArray, end: self.endArray, number: Int.random(in: 1...10))
-        }, completion: nil)
-//        questionTextLabel.text = makeQuestion(start: futureStartArray, end: endArray, number: Int.random(in: 1...10))
-        
+        questionTextLabelAttributes(labelText: makeQuestion(start: self.futureStartArray, end: self.endArray, number: Int.random(in: 1...10)))
     }
     
     
     @IBAction func pastBtnPressed(_ sender: RoundButton) {
         buttonsHide()
-        
-        UIView.transition(with: questionTextLabel, duration: 0.7, options: [.curveLinear, .transitionCrossDissolve], animations: {
-            self.questionTextLabel.text = makeQuestion(start: self.pastStartArray, end: self.endArray, number: Int.random(in: 1...10))
-        }, completion: nil)
-//        questionTextLabel.text = makeQuestion(start: pastStartArray, end: endArray, number: Int.random(in: 1...10))
-    }
+        questionTextLabelAttributes(labelText: makeQuestion(start: self.pastStartArray, end: self.endArray, number: Int.random(in: 1...10)))
+   }
     
     @IBAction func whoBtnPressed(_ sender: RoundButton) {
         whoBtn.isHidden = true
         againBtn.isHidden = false
         stackPastFutureBtns.isHidden = true
-
-        
-        UIView.transition(with: questionTextLabel, duration: 0.7, options: [.curveLinear, .transitionCrossDissolve], animations: {
-            self.questionTextLabel.font = self.questionTextLabel.font.withSize(120)
-            self.questionTextLabel.text = String(Int.random(in: 1...10))
-        }, completion: nil)
-        
-    }
+        questionTextLabelAttributes(textSize: 150,labelText: String(Int.random(in: 1...10)))
+   }
     
-    @IBAction func againBtnPressed(_ sender: Any) {
+    @IBAction func againOrResetBtnPressed(_ sender: Any) {
         resetScreen()
     }
-    
-    @IBAction func resetBtnPressed(_ sender: UIBarButtonItem) {
-        resetScreen()
-    }
-    
 }
 
