@@ -178,6 +178,8 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="againBtn" destination="NEJ-zz-1dM" id="LIG-gK-ivj"/>
+                        <outlet property="futureBtn" destination="ETJ-et-BmU" id="bXT-lU-aWm"/>
+                        <outlet property="pastBtn" destination="SIL-cn-hdq" id="ikj-c3-z83"/>
                         <outlet property="questionTextLabel" destination="p2Z-uF-Akb" id="tp3-3B-g3R"/>
                         <outlet property="stackPastFutureBtns" destination="k9b-4v-V6l" id="loh-pX-bXp"/>
                         <outlet property="whoBtn" destination="ccs-0h-408" id="2E2-up-3yt"/>

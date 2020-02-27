@@ -8,7 +8,7 @@
 
 import Foundation
 
-func makeQuestion(start: Array<String>, end: Array<String>, number: Int) -> String {
+func makeQuestion(start: [String], end: [String], number: Int) -> String {
     var question: String
     let questionForm = start.randomElement()! + String(number) + " " + end.randomElement()!
     
