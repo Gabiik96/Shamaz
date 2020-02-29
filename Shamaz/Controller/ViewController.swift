@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var whoBtn: RoundButton!
     @IBOutlet weak var stackPastFutureBtns: UIStackView!
     @IBOutlet weak var againBtn: RoundButton!
+    @IBOutlet weak var futureBtn: RoundButton!
+    @IBOutlet weak var pastBtn: RoundButton!
     
     
     //MARK: - ViewAppear/Load
@@ -52,13 +54,10 @@ class ViewController: UIViewController {
     // MARK: - Functions
     // Function to hide/unhide Past & Future button
     func buttonsHide(){
-        if stackPastFutureBtns.isHidden == false {
-            stackPastFutureBtns.isHidden = true
-            whoBtn.isHidden = false
-        } else {
-            stackPastFutureBtns.isHidden = false
-            whoBtn.isHidden = true
-        }
+        let isBothHidden = futureBtn.isHidden && pastBtn.isHidden 
+        pastBtn.isHidden = !isBothHidden
+        futureBtn.isHidden = !isBothHidden
+        whoBtn.isHidden = isBothHidden
     }
     
     // Function to change attributes of questionTextLabel + animation
