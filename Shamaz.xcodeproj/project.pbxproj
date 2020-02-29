@@ -60,7 +60,7 @@
 		42F0B03023FF5905007689CB /* Shamaz */ = {
 			isa = PBXGroup;
 			children = (
-				42F0B04823FF67FE007689CB /* Delegate */,
+				42F0B04823FF67FE007689CB /* Unused */,
 				42F0B04623FF67E0007689CB /* Controller */,
 				42F0B04523FF67D7007689CB /* View */,
 				42F0B04B23FF683F007689CB /* Customs */,
@@ -95,19 +95,19 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
-		42F0B04823FF67FE007689CB /* Delegate */ = {
+		42F0B04823FF67FE007689CB /* Unused */ = {
 			isa = PBXGroup;
 			children = (
 				42F0B03123FF5905007689CB /* AppDelegate.swift */,
-				42F0B03323FF5905007689CB /* SceneDelegate.swift */,
 			);
-			path = Delegate;
+			path = Unused;
 			sourceTree = "<group>";
 		};
 		42F0B04B23FF683F007689CB /* Customs */ = {
 			isa = PBXGroup;
 			children = (
 				42F0B04C23FF6865007689CB /* RoundedButton.swift */,
+				42F0B03323FF5905007689CB /* SceneDelegate.swift */,
 				42ACC4F22402F0DB005E8C80 /* Logic.swift */,
 			);
 			path = Customs;

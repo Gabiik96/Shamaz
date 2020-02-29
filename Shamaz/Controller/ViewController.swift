@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     // MARK: - Arrays
     // Arrays, each contains part of question
-    let defaultText = "Tell us something about you from your"
+    let defaultText = "Tell us something about you from your ..."
     
     let pastStartArray = ["How was your best moment in last ",
                           "What extraordinary happend to you in last ",

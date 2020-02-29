@@ -83,7 +83,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6C-Tq-NUa">
                                 <rect key="frame" x="0.0" y="266" width="414" height="456"/>
                                 <subviews>
-                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="396" placeholderIntrinsicHeight="416" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="none" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2Z-uF-Akb">
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="396" placeholderIntrinsicHeight="416" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="none" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="p2Z-uF-Akb">
                                         <rect key="frame" x="5" y="20" width="404" height="416"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Text
@@ -97,7 +97,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="p2Z-uF-Akb" firstAttribute="centerY" secondItem="u6C-Tq-NUa" secondAttribute="centerY" id="1Wd-VG-Ee2"/>
-                                    <constraint firstItem="p2Z-uF-Akb" firstAttribute="centerX" secondItem="u6C-Tq-NUa" secondAttribute="centerX" id="8t6-Bv-Uv1"/>
                                     <constraint firstAttribute="trailing" secondItem="p2Z-uF-Akb" secondAttribute="trailing" constant="5" id="Sd1-dA-23C"/>
                                     <constraint firstAttribute="bottom" secondItem="p2Z-uF-Akb" secondAttribute="bottom" constant="20" symbolic="YES" id="YKG-M8-iTQ"/>
                                     <constraint firstItem="p2Z-uF-Akb" firstAttribute="leading" secondItem="u6C-Tq-NUa" secondAttribute="leading" constant="5" id="nN8-KN-QpT"/>
