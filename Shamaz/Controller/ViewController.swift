@@ -71,6 +71,8 @@ class ViewController: UIViewController {
     // Function defining what should happen to reset screen to default
     func resetScreen(){
         stackPastFutureBtns.isHidden = false
+        pastBtn.isHidden = false
+        futureBtn.isHidden = false
         whoBtn.isHidden = true
         againBtn.isHidden = true
         questionTextLabelAttributes(labelText: self.defaultText)
